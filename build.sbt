@@ -8,8 +8,17 @@ val core =
     organization := "ch.datuman",
     name := "play-geojson",
     libraryDependencies ++= Seq(
-      "com.typesafe.play" %% "play-json" % "2.8.1" % "provided",
       "org.specs2" %% "specs2-core" % "4.10.2" %  "test"
+    )
+  )
+  .jvmSettings(
+    libraryDependencies ++= Seq(
+    "com.typesafe.play" %% "play-json" % "2.9.4" % "provided",
+    )
+  )
+  .jsSettings(
+    libraryDependencies ++= Seq(
+    "com.typesafe.play" %%% "play-json" % "2.7.4" % "provided",
     )
   )
 val coreJVM = core.jvm
